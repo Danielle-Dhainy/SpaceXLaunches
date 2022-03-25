@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/errorRel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/errorImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="100dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/errorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/errorImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="40dp"
+                    android:gravity="center"
+                    android:textDirection="locale"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/infoRel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="550dp"
+                    android:alpha="0.7"
+                    android:foreground="@drawable/blue_dradient_2"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/space" />
+
+                <ImageView
+                    android:id="@+id/closeImage"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/close" />
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_above="@+id/infoContainer"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginEnd="65dp"
+                    android:layout_marginBottom="25dp"
+                    android:progress="45"
+                    android:progressDrawable="@drawable/custom_progress"
+                    android:scrollbarStyle="insideInset" />
+
+                <LinearLayout
+                    android:id="@+id/infoContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/container_white"
+                    android:orientation="vertical"
+                    android:layout_alignParentBottom="true">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="25dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/nameRel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_toStartOf="@+id/number"
+                                    android:text="Colombia launching"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="20dp"
+                                    android:layout_centerVertical="true"
+                                    android:fontFamily="@font/lato_bold"/>
+
+                                <TextView
+                                    android:id="@+id/number"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="3756"
+                                    android:textColor="@color/blue"
+                                    android:textSize="20dp"
+                                    android:fontFamily="@font/lato_bold"/>
+
+
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/horizontalLine"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="17dp"
+                                android:background="@color/light_gray_3" />
+
+                            <TextView
+                                android:id="@+id/date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_toStartOf="@+id/number"
+                                android:text="24 Feb 2022, 11:25 GMT+5"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="17dp"
+                                android:fontFamily="@font/lato_regular"/>
+
+
+                            <TextView
+                                android:id="@+id/description"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxHeight="150dp"
+                                android:layout_marginTop="15dp"
+                                android:lineSpacingExtra="5dp"
+                                android:text="@string/lorem_ipsum"
+                                android:textColor="@color/light_gray_2"
+                                android:fontFamily="@font/lato_regular"/>
+
+                            <Button
+                                android:id="@+id/readMoreBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:backgroundTint="@color/blue"
+                                android:text="@string/read_more"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:fontFamily="@font/lato_regular"/>
+
+
+                            <TextView
+                                android:id="@+id/share"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:text="@string/share"
+                                android:textColor="@drawable/ripple_yellow_text"
+                                android:textSize="18sp"
+                                android:paddingBottom="35dp"
+                                android:fontFamily="@font/lato_regular"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

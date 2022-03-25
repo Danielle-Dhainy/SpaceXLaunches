@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SpaceX Launches</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="share">Share</string>
+    <string name="read_more">Read More</string>
+    <string name="launches">Launches</string>
+    <string name="big_launch">The Big Launch</string>
+    <string name="gold">GOLD</string>
+    <string name="space_ships">SPACE SHIPS</string>
+    <string name="by_eng">by Eng. Dieter Rams</string>
+    <string name="big_launch_number">2355</string>
+    <string name="big_launch_name">ISS geosynchronous and is it stationary</string>
+    <string name="big_launch_date">24 Feb 2022 11:25 GMT+5</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros enim, dictum vitae quam nec, congue feugiat neque. Vivamus ut luctus enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros enim, dictum vitae quam nec, congue feugiat neque. Vivamus ut luctus enim. </string>
+    <string name="error_msg">Something went wrong. Please try again </string>
+    <string name="check_connection">Please check your connection</string>
+    <string name="error">Error</string>
+    <string name="connection">Connection</string>
+
+</resources>
